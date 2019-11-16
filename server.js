@@ -9,8 +9,11 @@ const passport = require("passport");
 const flash = require("express-flash");
 const session = require("express-session");
 const initializePassport = require("./passport-config");
-initializePassport(passport, email => users.find(user => user.email === email));
-id => users.find(user => user.id === id);
+initializePassport(
+  passport,
+  email => users.find(user => user.email === email),
+  id => users.find(user => user.id === id)
+);
 
 const users = [];
 
@@ -32,6 +35,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
+  console.log(res.locals);
   res.render("login.ejs");
 });
 
@@ -60,6 +64,7 @@ app.post("/register", async (req, res) => {
   } catch {
     res.redirect("/register");
   }
+  console.log(users);
 });
 
 app.listen(3000);
