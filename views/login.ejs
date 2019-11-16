@@ -8,8 +8,8 @@
     <title>Login</title>
   </head>
   <body>
-    <h1>Login</h1>
     <% if (messages.error) { %> <%= messages.error %> <% } %>
+    <h1>Login</h1>
     <form action="/login" method="POST">
       <div class="form">
         <input
@@ -17,6 +17,7 @@
           id="email"
           name="email"
           autocomplete="off"
+          auto-fill="off"
           required
         />
         <label for="email" class="label-name">
@@ -29,6 +30,7 @@
           id="password"
           name="password"
           autocomplete="off"
+          auto-fill="off"
           required
         />
         <label for="password" class="label-name">
@@ -38,5 +40,6 @@
       <button type="submit">Login</button>
       <a href="/register">Register</a>
     </form>
+    <img src="/images/ice.jpg" alt="" />
   </body>
 </html>

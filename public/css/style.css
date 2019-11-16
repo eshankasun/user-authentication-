@@ -7,9 +7,10 @@
 body {
   height: 60vh;
   display: flex;
+
   justify-content: space-around;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   font-family: sans-serif;
 }
 
@@ -88,4 +89,7 @@ a {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+img {
+  height: 90%;
 }
