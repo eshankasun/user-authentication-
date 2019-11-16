@@ -18,6 +18,7 @@ initializePassport(
 const users = [];
 
 app.set("view-engine", "ejs");
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(flash());
 app.use(
@@ -35,7 +36,6 @@ app.get("/", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-  console.log(res.locals);
   res.render("login.ejs");
 });
 
@@ -64,7 +64,6 @@ app.post("/register", async (req, res) => {
   } catch {
     res.redirect("/register");
   }
-  console.log(users);
 });
 
 app.listen(3000);
