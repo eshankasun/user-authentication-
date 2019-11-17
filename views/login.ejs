@@ -9,7 +9,9 @@
   </head>
   <body>
     <% if (messages.error) { %> <%= messages.error %> <% } %>
-    <h1>Login</h1>
+  
+      <h1>Login</h1>
+  <div class='login-con'>
     <form action="/login" method="POST">
       <div class="form">
         <input
@@ -39,7 +41,9 @@
       </div>
       <button type="submit">Login</button>
       <a href="/register">Register</a>
-    </form>
+      </form>
+    </div>
+  </div>
     <img src="/images/ice.jpg" alt="" />
   </body>
 </html>

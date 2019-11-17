@@ -1,19 +1,43 @@
+@media (min-width: 760px) {
+  body {
+    height: 60vh;
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    font-family: sans-serif;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  height: 60vh;
-  display: flex;
-
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  font-family: sans-serif;
+body div,
+img,
+h1 {
+  /* border: 1px #ccc Solid; */
 }
 
+h1 {
+  text-align: center;
+  flex: 1;
+  order: 1;
+  flex-basis: 1;
+}
+img {
+  flex: 1;
+  order: 3;
+  flex-basis: 1;
+}
+.login-con {
+  flex: 1;
+  order: 2;
+  flex-basis: 2;
+}
 .form {
   width: 100%;
   position: relative;
@@ -89,7 +113,4 @@ a {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-}
-img {
-  height: 90%;
 }
